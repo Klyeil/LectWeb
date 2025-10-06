@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="weeklyMeal.css">
+    <link rel="icon" href="image/favicon.png">
+    <title>상명대학교 주간식단표</title>
+</head>
+<body>
+    <header>
+        <h1 class="mealTitle">WEEKLY MEAL PLAN<img src="image/sumung.png" alt="sumung"></h1>
+    </header>
+
+        <table class="mealTable">
+            <thead>
+                <tr>
+                    <th></th><th></th>
+                    <th class="mealDay"><span class="dayStar"></span><span class="dayText">MONDAY</span></th>
+                    <th class="mealDay"><span class="dayStar"></span><span class="dayText">TUESDAY</span></th>
+                    <th class="mealDay"><span class="dayStar"></span><span class="dayText">WEDNESDAY</span></th>
+                    <th class="mealDay"><span class="dayStar"></span><span class="dayText">THURSDAY</span></th>
+                    <th class="mealDay"><span class="dayStar"></span><span class="dayText">FRIDAY</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="mealType breakFast">조식</th>
+                    <th class="mealCorner aCorner">A코너</th>
+                    <td>
+                        <span>백미밥&부대햄찌개</span><br>
+                        <span>깍두기/매실차</span>
+                    </td>
+                    <td>
+                        <span>양송이오징어덮밥</span><br>
+                        <span>매콤콩나물국</span>
+                    </td>
+                    <td>
+                        <span>베이컨김치볶음밥</span><br>
+                        <span>조랭이미역국</span>
+                    </td>
+                    <td>
+                        <span>카레꼬마돈까스/장국</span><br>
+                        <span>매콤국물떡볶이</span>
+                    </td>
+                    <td>
+                        <span>보리밥/얼큰육개장</span><br>
+                        <span>쏘야볶음</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="mealType" rowspan="2">중식</th>
+                    <th class="mealCorner">B코너</th>
+                    <td>
+                        <span>등심돈까스</span><br>
+                        <span>고구마돈까스</span><br>
+                        <span>생선까스</span><br>
+                        <span>제육덮밥</span>
+                    </td>
+                    <td>
+                        <span>등심돈까스</span><br>
+                        <span>치즈돈까스</span><br>
+                        <span>치킨까스</span><br>
+                        <span>제육덮밥</span>
+                    </td>
+                    <td>
+                        <span>등심돈까스</span><br>
+                        <span>고구마돈까스</span><br>
+                        <span>생선까스/제육덮밥</span><br>
+                        <span>치킨마요덮밥</span>
+                    </td>
+                    <td>
+                        <span>등심돈까스</span><br>
+                        <span>치즈돈까스</span><br>
+                        <span>치킨까스</span><br>
+                        <span>제육덮밥</span>
+                    </td>
+                    <td>
+                        <span>등심돈까스</span><br>
+                        <span>고구마돈까스</span><br>
+                        <span>치킨/생선까스</span><br>
+                        <span>제육덮밥</span>
+                    </td>
+                </tr>
+                <tr class="cCornerRow">
+                    <th class="mealCorner">C코너</th>
+                    <td><span>맑은곰탕</span>
+                        <p>
+                            &lt;오늘의백반&gt;<br>
+                            소고기하이라이스<br>
+                            맑은콩나물국<br>
+                            두반장가지볶음<br>
+                            스크렘블에그<br>
+                            포기김치
+                        </p>
+                    </td>
+                    <td><span>메밀소바</span>
+                        <p>
+                            &lt;오늘의백반&gt;<br>
+                            기장밥<br>
+                            버섯육개장<br>
+                            애플파이춘권<br>
+                            부추양파겉절이<br>
+                            열무김치
+                        </p>
+                    </td>
+                    <td>맑은순대국
+                        <p>
+                            &lt;오늘의백반&gt;<br>
+                            현미밥<br>
+                            시금치국<br>
+                            고추장돈불고기<br>
+                            감자채햄볶음<br>
+                            마늘쫑무침
+                        </p>
+                    </td>
+                    <td><span>맑은순대국</span>
+                        <p>
+                            &lt;오늘의백반&gt;<br>
+                            찰흑미밥<br>
+                            홍합미역국<br>
+                            맛초킹탕수육<br>
+                            실곤약야채무침<br>
+                            깍두기
+                        </p>
+                    </td>
+                    <td><span>설렁탕</span>
+                        <p>
+                            &lt;오늘의백반&gt;<br>
+                            보리밥<br>
+                            얼갈이된장국<br>
+                            김치제육볶음<br>
+                            두부구이<br>
+                            짜사이무침
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <script>
+            const menuItems = document.querySelectorAll('.mealTable tbody td span');
+
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    item.classList.toggle("selected");
+                });
+            });
+
+            document.addEventListener("DOMContentLoaded", function() {
+            const today = new Date().getDay();
+
+            if (today >= 1 && today <= 5) {
+                const todayHeader = document.querySelector(`.mealTable thead th:nth-child(${today + 2})`);
+                
+                if (todayHeader) {
+                    todayHeader.classList.add('isToday');
+                }
+            }
+            });
+        </script>
+
+</body>
+</html>
